@@ -10,9 +10,10 @@ class Solution:
 
         result = []
         i = 0
+        l = len(s)
         
-        while i < len(s):
-            if i + 2 < len(s) and s[i + 2] == '#':
+        while i < l:
+            if i + 2 < l and s[i + 2] == '#':
                 result.append(mapping[s[i:i + 3]])
                 i += 3
             else:
