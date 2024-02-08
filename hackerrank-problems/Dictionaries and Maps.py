@@ -9,10 +9,11 @@ for _ in range(N):
     phone_book[name] = phone
 
 for _ in range(N):
-    output.append(str(input))
+    inp = input()
+    output.append(inp)
 
 for name in output:
     if name in phone_book:
         print(f"{name}={phone_book[name]}")
     else:
-        print("Not Found")
+        print("Not found")
