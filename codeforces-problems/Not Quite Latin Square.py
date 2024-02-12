@@ -12,7 +12,6 @@ for i in range(n):
         if "?" in rows[i]:
             for j in range(len(rows[i])):
                 if rows[i][j] == "?":
-                    #check for A
                     column = [row_1[j],row_2[j],row_3[j]]
                     if "A" not in rows[i] and "A" not in column:
                         results.append("A")
