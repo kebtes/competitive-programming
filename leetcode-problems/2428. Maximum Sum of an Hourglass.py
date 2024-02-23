@@ -5,14 +5,11 @@ class Solution:
 
         max_sum = 0
 
-        for i in range(row):
-            for j in range(col):
+        for i in range(row-2):
+            for j in range(col-2):
                 sum_ = 0
 
-                if i + 2 > row - 1 or j + 2 > col - 1:
-                    continue
-
-                sum_ += sum(grid[i][j:j+3]) + sum(grid[i+2][j:j+3]) + grid[i+1][j+1]
+                sum_ += grid[i][j] + grid[i][j+1] + grid[i][j+2] + grid[i+1][j+1] + grid[i+2][j] + grid[i+2][j+1] + grid[i+2][j+2]
                 max_sum = max(sum_, max_sum)
 
         return max_sum
